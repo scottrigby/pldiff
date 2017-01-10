@@ -1,0 +1,60 @@
+'\" t
+.\"     Title: pldiff
+.\"    Author: [see the "AUTHOR" section]
+.\" Generator: DocBook XSL Stylesheets v1.79.1 <http://docbook.sf.net/>
+.\"      Date: 01/10/2017
+.\"    Manual: \ \&
+.\"    Source: \ \&
+.\"  Language: English
+.\"
+.TH "PLDIFF" "1" "01/10/2017" "\ \&" "\ \&"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "NAME"
+pldiff \- Compares plist files line by line
+.SH "SYNOPSIS"
+.sp
+\fBpldiff\fR \fIFILE1\fR \fIFILE2\fR [\fIOPTIONS\fR]
+.SH "DESCRIPTION"
+.sp
+The pldiff(1) command compares plist files line by line\&.
+.sp
+Because plist files are binary, diff(1) does not display the difference between them\&. However, there are cases where examining this is valuable\&. For example, when comparing an exising plist config file to a backup copy before restore\&.
+.sp
+Note pldiff(1) emulates the look and feel of git\(cqs default diff, including +/\- indicators, less for vi\-like viewing, and supports colordiff(1) if installed\&.
+.SH "OPTIONS"
+.sp
+pldiff(1) accepts all options for diff(1)\&.
+.SH "BUGS"
+.sp
+Feel free to report issues, share ideas, and make pull requests at https://github\&.com/scottrigby/pldiff
+.SH "AUTHOR"
+.sp
+Scott Rigby <scott@r6by\&.com>
+.SH "SEE ALSO"
+.sp
+plgitdiff(1)
+.SH "COPYRIGHT"
+.sp
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version\&.
+.sp
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE\&. See the GNU General Public License for more details\&.
+.sp
+You should have received a copy of the GNU General Public License along with this program as the file LICENSE\&.txt; if not, please see http://www\&.gnu\&.org/licenses/old\-licenses/gpl\-2\&.0\&.txt\&.
