@@ -1,0 +1,35 @@
+#!/bin/bash
+
+## @file
+## Compares plist files line by line.
+##
+## To install colordiff on Debian or Ubuntu:
+## @code
+## sudo apt-get install colordiff
+## @endcode
+##
+## To install colordiff on Mac:
+## @code
+## brew install colordiff
+## @endcode
+##
+## @see https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man5/plist.5.html
+## @see http://stackoverflow.com/questions/9485713/editor-or-way-to-print-plist-in-a-clean-way-without-xcode
+## @see http://stackoverflow.com/questions/13437104/compare-content-of-two-variables-in-bash
+## @see http://stackoverflow.com/questions/4857310/how-to-get-diff-working-like-git-diff
+##
+## Usage:
+## See man pldiff
+
+a=$(plutil -convert xml1 -o - "$1")
+b=$(plutil -convert xml1 -o - "$2")
+
+# The -u flag displays line numbers with "+" and "-" (rather than ">" and "<").
+# The optional colordiff binary defaults to green/red.
+# Less -R is used to emulate vi.
+which colordiff &> /dev/null
+if [ $? == 0 ]; then
+  diff -u <(echo "$a") <(echo "$b") "${@:3}" | colordiff | less -R
+else
+  diff -u <(echo "$a") <(echo "$b") "${@:3}" | less -R
+fi
