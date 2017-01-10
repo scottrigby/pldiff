@@ -1,0 +1,65 @@
+PLDIFF(1)
+=========
+:doctype: manpage
+
+
+NAME
+----
+pldiff - Compares plist files line by line
+
+
+SYNOPSIS
+--------
+*pldiff* 'FILE1' 'FILE2' ['OPTIONS']
+
+
+DESCRIPTION
+-----------
+The pldiff(1) command compares plist files line by line.
+
+Because plist files are binary, diff(1) does not display the
+difference between them. However, there are cases where examining
+this is valuable. For example, when comparing an exising plist config
+file to a backup copy before restore.
+
+Note pldiff(1) emulates the look and feel of git's default diff,
+including +/- indicators, less for vi-like viewing, and supports
+colordiff(1) if installed.
+
+
+OPTIONS
+-------
+pldiff(1) accepts all options for diff(1).
+
+
+BUGS
+----
+Feel free to report issues, share ideas, and make pull requests at
+https://github.com/scottrigby/pldiff
+
+
+AUTHOR
+------
+Scott Rigby <scott@r6by.com>
+
+
+SEE ALSO
+--------
+plgitdiff(1)
+
+
+COPYRIGHT
+---------
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or (at
+your option) any later version.
+
+This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program as the file LICENSE.txt; if not, please see
+http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt.
