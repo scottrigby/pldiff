@@ -20,9 +20,6 @@ fi
 
 PREFIX=${option:-/usr/local}
 
-mkdir -p $PREFIX/bin || (mkdir $PREFIX; mkdir $PREFIX/bin)
-cp pldiff > $PREFIX/bin/pldiff
-chmod +x $PREFIX/bin/pldiff
-
-mkdir -p $PREFIX/man/man1 || ($mkdir $PREFIX; mkdir $PREFIX/man; mkdir $PREFIX/man/man1)
-cp pldiff.1 > $PREFIX/man/man1/pldiff.1
+cp -r * $PREFIX
+chmod a+x $PREFIX/bin/pldiff
+chmod a+r $PREFIX/share/man/man1/pldiff.1
